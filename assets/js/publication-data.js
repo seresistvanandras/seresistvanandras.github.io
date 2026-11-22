@@ -1,6 +1,6 @@
 window.PUBLICATIONS = [
   {
-    "year": 2026,
+    "year": 2025,
     "title": "A Tattered Cloak of Invisibility: Measuring Anonymity Loss in Railgun on Ethereum",
     "authors": [
       "Kanan Huseynov",
@@ -71,7 +71,7 @@ window.PUBLICATIONS = [
     ]
   },
   {
-    "year": 2025,
+    "year": 2026,
     "title": "Forking the RANDAO: Manipulating Ethereum’s Distributed Randomness Beacon",
     "authors": [
       "Ábel Nagy",
@@ -94,7 +94,7 @@ window.PUBLICATIONS = [
     ]
   },
   {
-    "year": 2025,
+    "year": 2026,
     "title": "Bribers, Bribers on The Chain, Is Resisting All in Vain? Trustless Consensus Manipulation Through Bribing Contracts",
     "authors": [
       "Bence Soóki-Tóth",
@@ -104,11 +104,20 @@ window.PUBLICATIONS = [
       "Balázs Pejó",
       "Gergely Biczók"
     ],
-    "venue": "Preprint · IACR ePrint 2025/1719",
+    "venue": "Financial Cryptography and Data Security 2026",
     "pdf": "assets/papers/bribing-contracts-2025.pdf",
+    "pdfLabel": "Local preprint PDF",
     "sources": [
       {
-        "label": "ePrint",
+        "label": "Proceedings PDF",
+        "href": "https://www.ifca.ai/fc26/preproceedings/95.pdf"
+      },
+      {
+        "label": "FC 2026 Program",
+        "href": "https://www.ifca.ai/fc26/program.html"
+      },
+      {
+        "label": "IACR ePrint (preprint)",
         "href": "https://eprint.iacr.org/2025/1719"
       }
     ],

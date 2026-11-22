@@ -41,6 +41,7 @@
     const pdf = dialog.querySelector('.paper-pdf');
     pdf.href = paper.pdf;
     pdf.download = '';
+    pdf.textContent = paper.pdfLabel || 'Download PDF ↗';
     const hash = `paper-${slug(paper.title)}`;
     permalink.href = `#${hash}`;
     if (!openingFromHash && location.hash !== `#${hash}`) history.replaceState(null, '', `#${hash}`);
@@ -74,7 +75,7 @@
     card.append(title);
     card.append(element('div', 'authors', paper.authors.join(', ')));
     const links = element('div', 'links');
-    const localPdf = element('a', '', 'Local PDF');
+    const localPdf = element('a', '', paper.pdfLabel || 'Local PDF');
     localPdf.href = paper.pdf;
     localPdf.download = '';
     links.append(localPdf);

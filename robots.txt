@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seresistvanandras.github.io/sitemap.xml

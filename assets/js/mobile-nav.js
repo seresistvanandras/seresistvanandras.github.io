@@ -1,4 +1,29 @@
 document.querySelectorAll('header nav').forEach((nav, index) => {
+  if (nav.hasAttribute('data-shared-navigation')) {
+    const items = [
+      ['Home', 'index.html'], ['Papers', 'publications.html'], ['Talks', 'talks.html'],
+      ['Collaborations', 'collaborations.html'], ['Press & Media', 'press.html'],
+      ['Teaching', 'teaching.html'], ['Advising', 'advising.html'],
+      ['Contact', 'contact.html'], ['CV', 'https://istvanseres.web.elte.hu/istvanseres.pdf']
+    ];
+    const currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+    const brand = document.createElement('a');
+    brand.className = 'brand';
+    brand.href = 'index.html';
+    brand.innerHTML = 'István András <b>Seres</b>';
+    const links = items.map(([label, href]) => {
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = label;
+      if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
+        link.className = 'active';
+        link.setAttribute('aria-current', 'page');
+      }
+      return link;
+    });
+    nav.replaceChildren(brand, ...links);
+  }
+
   const brand = nav.querySelector(':scope > .brand');
   const links = [...nav.querySelectorAll(':scope > a:not(.brand)')];
   if (!brand || links.length === 0) return;
@@ -46,6 +71,6 @@ document.querySelectorAll('header nav').forEach((nav, index) => {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 820) closeMenu();
+    if (window.innerWidth > 980) closeMenu();
   });
 });

@@ -19,7 +19,7 @@
     const pdf = document.createElement('a');
     pdf.href = paper.pdf;
     pdf.download = '';
-    pdf.textContent = 'Local PDF';
+    pdf.textContent = paper.pdfLabel || 'Local PDF';
     links.append(pdf);
     paper.sources.forEach(source => {
       const link = document.createElement('a');

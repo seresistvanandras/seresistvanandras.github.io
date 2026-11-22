@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Papers — István András Seres</title><meta name="description" content="Research papers by István András Seres in cryptography, blockchain security and privacy."><link rel="canonical" href="https://seresistvanandras.github.io/publications.html"><meta property="og:type" content="website"><meta property="og:title" content="Papers — István András Seres"><meta property="og:description" content="Research papers by István András Seres in cryptography, blockchain security and privacy."><meta property="og:url" content="https://seresistvanandras.github.io/publications.html"><meta property="og:image" content="https://seresistvanandras.github.io/assets/images/profile.jpg"><meta name="twitter:card" content="summary">
+<title>Papers — István András Seres</title><meta name="description" content="Research papers by István András Seres on cryptography, blockchain security, and privacy, searchable by year, author, and topic."><link rel="canonical" href="https://seresistvanandras.github.io/publications.html"><meta property="og:type" content="website"><meta property="og:title" content="Papers — István András Seres"><meta property="og:description" content="Research papers by István András Seres on cryptography, blockchain security, and privacy, searchable by year, author, and topic."><meta property="og:url" content="https://seresistvanandras.github.io/publications.html"><meta property="og:image" content="https://seresistvanandras.github.io/assets/images/profile.jpg"><meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/mobile-nav.js" defer></script></head><body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header><nav><a class="brand" href="index.html">István András <b>Seres</b></a><a class="" href="index.html">Home</a><a class="active" href="publications.html">Papers</a><a class="" href="talks.html">Talks</a><a href="collaborations.html">Collaborations</a><a href="press.html">Press &amp; Media</a><a class="" href="teaching.html">Teaching</a><a class="" href="advising.html">Advising</a><a href="contact.html">Contact</a><a href="https://istvanseres.web.elte.hu/istvanseres.pdf">CV</a></nav></header>
+<header><nav data-shared-navigation aria-label="Primary"><a class="brand" href="index.html">István András <b>Seres</b></a><a class="" href="index.html">Home</a><a class="active" href="publications.html">Papers</a><a class="" href="talks.html">Talks</a><a href="collaborations.html">Collaborations</a><a href="press.html">Press &amp; Media</a><a class="" href="teaching.html">Teaching</a><a class="" href="advising.html">Advising</a><a href="contact.html">Contact</a><a href="https://istvanseres.web.elte.hu/istvanseres.pdf">CV</a></nav></header>
 <div class="wrap"><aside><img class="portrait" src="assets/images/profile.jpg" alt="István András Seres">
 <div class="name">István András Seres</div><div class="role">Postdoctoral Researcher<br>Princeton University</div>
 <p class="small">Cryptography · Blockchain Security & Privacy</p>
@@ -24,5 +24,25 @@
 <a class="paper-pdf" target="_blank" rel="noopener">Download PDF ↗</a> <a id="paper-permalink" class="paper-permalink">Link to this paper ↗</a>
 </dialog>
 <footer>© 2026 István András Seres · Built for GitHub Pages · <a href="https://istvanseres.web.elte.hu/">ELTE site</a></footer>
-<script src="assets/js/publication-data.js"></script><script src="assets/js/publication-page.js"></script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31ae7902332245d4b2b64dac29ed133d"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="assets/js/publication-data.js"></script><script>
+(()=>{
+  const root='https://seresistvanandras.github.io/';
+  const articles=(window.PUBLICATIONS||[]).map((paper,index)=>({
+    '@type':'ListItem',
+    'position':index+1,
+    'item':{
+      '@type':'ScholarlyArticle',
+      'headline':paper.title,
+      'author':paper.authors.map(name=>({'@type':'Person','name':name})),
+      'datePublished':String(paper.year),
+      'isPartOf':{'@type':'CreativeWork','name':paper.venue},
+      'url':paper.sources?.[0]?.href||`${root}publications.html`,
+      'sameAs':(paper.sources||[]).map(source=>source.href),
+      'encoding':{'@type':'MediaObject','contentUrl':new URL(paper.pdf,root).href,'encodingFormat':'application/pdf'}
+    }
+  }));
+  const data={'@context':'https://schema.org','@type':'CollectionPage','name':'Research papers by István András Seres','url':`${root}publications.html`,'mainEntity':{'@type':'ItemList','itemListElement':articles}};
+  const script=document.createElement('script');script.type='application/ld+json';script.textContent=JSON.stringify(data);document.head.append(script);
+})();
+</script><script src="assets/js/publication-page.js"></script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31ae7902332245d4b2b64dac29ed133d"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>
