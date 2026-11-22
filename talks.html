@@ -1,27 +1,214 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Talks — István András Seres</title><meta name="description" content="István András Seres — cryptography, blockchain security and privacy.">
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<header><nav><a class="brand" href="index.html">István András <b>Seres</b></a><a class="" href="index.html">Home</a><a class="" href="publications.html">Publications</a><a class="active" href="talks.html">Talks</a><a class="" href="teaching.html">Teaching</a><a class="" href="advising.html">Advising</a><a href="https://istvanseres.web.elte.hu/istvanseres.pdf">CV</a></nav></header>
+<title>Talks — István András Seres</title><meta name="description" content="István András Seres — cryptography, blockchain security and privacy."><link rel="canonical" href="https://seresistvanandras.github.io/talks.html"><meta property="og:type" content="website"><meta property="og:title" content="Talks — István András Seres"><meta property="og:description" content="István András Seres — cryptography, blockchain security and privacy."><meta property="og:url" content="https://seresistvanandras.github.io/talks.html"><meta property="og:image" content="https://seresistvanandras.github.io/assets/images/profile.jpg"><meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/mobile-nav.js" defer></script></head><body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header><nav><a class="brand" href="index.html">István András <b>Seres</b></a><a class="" href="index.html">Home</a><a class="" href="publications.html">Papers</a><a class="active" href="talks.html">Talks</a><a href="collaborations.html">Collaborations</a><a href="press.html">Press &amp; Media</a><a class="" href="teaching.html">Teaching</a><a class="" href="advising.html">Advising</a><a href="contact.html">Contact</a><a href="https://istvanseres.web.elte.hu/istvanseres.pdf">CV</a></nav></header>
 <div class="wrap"><aside><img class="portrait" src="assets/images/profile.jpg" alt="István András Seres">
 <div class="name">István András Seres</div><div class="role">Postdoctoral Researcher<br>Princeton University</div>
 <p class="small">Cryptography · Blockchain Security & Privacy</p>
-<div class="social"><a class="pill" href="https://scholar.google.com/citations?user=Zni5ZhYAAAAJ&hl=en">Scholar</a><a class="pill" href="https://github.com/seresistvanandras">GitHub</a><a class="pill" href="https://orcid.org/0000-0003-0143-4057">ORCID</a><a class="pill" href="https://x.com/Istvan_A_Seres">X</a><a class="pill" href="https://www.youtube.com/@Istv%C3%A1nAndr%C3%A1sSeres">YouTube</a></div>
-</aside><main>
+<div class="social"><a class="pill" href="https://scholar.google.com/citations?user=Zni5ZhYAAAAJ&hl=en">Scholar</a><a class="pill" href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1457919">MathSciNet</a><a class="pill" href="https://github.com/seresistvanandras">GitHub</a><a class="pill" href="https://orcid.org/0000-0003-0143-4057">ORCID</a><a class="pill" href="https://x.com/Istvan_A_Seres">X</a><a class="pill" href="https://www.youtube.com/@Istv%C3%A1nAndr%C3%A1sSeres">YouTube</a></div>
+</aside><main id="main-content">
 <div class="eyebrow">Presentations</div><h1 class="page-title">Talks</h1><p class="lead">Selected invited and contributed talks. The homepage highlights four talks I am particularly proud of.</p>
+<section class="talkmap-section" aria-labelledby="talkmap-title"><h2 id="talkmap-title">Talk map</h2>
+<p class="map-intro">Zoom or drag to explore locations. Select a marker to see details and available recordings or slides.</p>
+<div id="talk-map" role="region" aria-label="World map of talk locations">
+<div id="map-viewport" class="map-viewport">
+<div id="map-canvas" class="map-canvas">
+<img id="world-map" src="assets/images/world-map.svg" alt="Detailed world map with country borders" width="1100" height="550">
+<div id="map-markers" aria-label="Talk locations"></div>
+</div></div>
+<div class="map-controls" aria-label="Map zoom controls">
+<button type="button" id="map-zoom-in" aria-label="Zoom in">+</button>
+<button type="button" id="map-zoom-out" aria-label="Zoom out">−</button>
+<button type="button" id="map-reset" aria-label="Reset map zoom">Reset</button>
+</div>
+<div class="map-caption"><span class="map-caption-mark"></span> Select a location to explore talks</div>
+<div class="map-credit">Natural Earth 1:50m · Public domain</div>
+</div>
+<div class="talk-explorer">
+<div class="talk-stats" id="talk-stats" aria-label="Talk map summary"></div>
+<label class="talk-search-label" for="talk-search">Find talks by city or country</label>
+<input id="talk-search" class="talk-search" type="search" placeholder="Try Amsterdam, France, or a talk title…" autocomplete="off">
+<div id="talk-search-results" class="talk-search-results" aria-live="polite" hidden></div>
+<div class="talk-aggregate-grid">
+<section class="talk-aggregate"><h3>Talks by country</h3><div id="country-aggregate" class="aggregate-list"></div></section>
+<section class="talk-aggregate"><h3>Talks by city</h3><div id="city-aggregate" class="aggregate-list"></div></section>
+</div>
+</div>
+<details class="talk-index-details"><summary>Browse all talks</summary><div id="talk-index" class="talk-index" aria-label="Talks on the map"></div></details>
+<dialog id="talk-detail" class="talk-detail" aria-labelledby="talk-detail-title"></dialog>
+</section>
 <section><h2>Featured</h2><div class="grid">
 <a class="card" href="https://www.youtube.com/watch?v=vD854wtMBGk"><div class="kicker">EthCC[8] · Cannes, France · June 30, 2025 · Video</div><h3>poqeth: Efficient, post-quantum signature verification on Ethereum</h3><p>Zero Knowledge & Cryptography track.</p></a>
 <a class="card" href="https://crypto.stanford.edu/seclab/sem-24-25/seres.html"><div class="kicker">Stanford Security Seminar · Stanford, CA · May 5, 2025</div><h3>Manipulating and Fixing the RANDAO, Ethereum's Distributed Randomness Beacon Protocol</h3><p>Invited security seminar.</p></a>
 <a class="card" href="https://www.youtube.com/watch?v=vMUzq-L0ypo"><div class="kicker">Protocol Berg v2 · Video</div><h3>Forking the RANDAO: Manipulating Ethereum’s Distributed Randomness Beacon</h3><p>Protocol Berg v2.</p></a>
 <a class="card" href="https://www.youtube.com/watch?v=PtZuopQH82g"><div class="kicker">ETHIstanbul 2025 · Video</div><h3>Trustless Consensus Manipulation Through Bribing Contracts</h3><p>ETHIstanbul 2025.</p></a>
 </div></section>
-<section><h2>More talks</h2>
-<div class="entry"><div class="venue">CT-RSA 2025 · San Francisco, USA</div><div class="title">How (not) to hash into class groups of imaginary quadratic fields?</div><div class="links"><a href="https://www.youtube.com/watch?v=BGvFYSsZFpY">Video</a></div></div>
-<div class="entry"><div class="venue">IEEE ICBC 2025 · Pisa, Italy</div><div class="title">Towards Measuring the Traceability of Cryptocurrencies</div></div>
-<div class="entry"><div class="venue">IMDEA Departmental Seminar · Madrid, Spain · 2021</div><div class="title">The Cambrian Explosion of Private Message Detection Schemes</div><div class="links"><a href="https://www.youtube.com/watch?v=s5vabHCGkjI">Video</a></div></div>
-<div class="entry"><div class="venue">Financial Cryptography 2022 · St. George's, Grenada</div><div class="title">The Effect of False Positives: Why Fuzzy Message Detection Leads to Fuzzy Privacy Guarantees?</div></div>
-<div class="entry"><div class="venue">CESC 2019 · Berkeley, USA</div><div class="title">ShareLock: Financial Privacy-enhancing NOW!</div></div>
-<div class="entry"><div class="venue">EthCC 2019 · Paris, France</div><div class="title">MixEth: Efficient, Trustless Coin Mixing Service for Ethereum</div></div>
-<div class="entry"><div class="venue">Breaking Bitcoin 2019 · Amsterdam, Netherlands</div><div class="title">Topological Analysis of Bitcoin's Lightning Network</div></div>
-</section>
+<section><h2>More talks</h2><div id="more-talks-list"></div></section>
 </main></div>
-<footer>© 2026 István András Seres · Built for GitHub Pages · <a href="https://istvanseres.web.elte.hu/">ELTE site</a></footer></body></html>
+<footer>© 2026 István András Seres · Built for GitHub Pages · <a href="https://istvanseres.web.elte.hu/">ELTE site</a></footer>
+<script>
+const talks = [
+  {title:'poqeth: Efficient, post-quantum signature verification on Ethereum',venue:'EthCC[8] · Zero Knowledge & Cryptography track',date:'June 30, 2025',place:'Cannes, France',city:'Cannes',country:'France',coords:[43.5528,7.0174],video:'https://www.youtube.com/watch?v=vD854wtMBGk'},
+  {title:'Manipulating and Fixing the RANDAO, Ethereum’s Distributed Randomness Beacon Protocol',venue:'Stanford Security Seminar',date:'May 5, 2025',place:'Stanford, California, USA',city:'Stanford',country:'USA',coords:[37.4275,-122.1697],url:'https://crypto.stanford.edu/seclab/sem-24-25/seres.html'},
+  {title:'Trustless Consensus Manipulation Through Bribing Contracts',venue:'ETHIstanbul 2025',date:'2025',place:'Istanbul, Türkiye',city:'Istanbul',country:'Türkiye',coords:[41.0082,28.9784],video:'https://www.youtube.com/watch?v=PtZuopQH82g'},
+  {title:'How (not) to hash into class groups of imaginary quadratic fields?',venue:'CT-RSA 2025',date:'2025',place:'San Francisco, California, USA',city:'San Francisco',country:'USA',coords:[37.7749,-122.4194],video:'https://www.youtube.com/watch?v=BGvFYSsZFpY'},
+  {title:'Towards Measuring the Traceability of Cryptocurrencies',venue:'IEEE ICBC 2025',date:'2025',place:'Pisa, Italy',city:'Pisa',country:'Italy',coords:[43.7228,10.4017]},
+  {title:'The Cambrian Explosion of Private Message Detection Schemes',venue:'IMDEA Departmental Seminar',date:'2021',place:'Madrid, Spain',city:'Madrid',country:'Spain',coords:[40.4168,-3.7038],video:'https://www.youtube.com/watch?v=s5vabHCGkjI'},
+  {title:'The Effect of False Positives: Why Fuzzy Message Detection Leads to Fuzzy Privacy Guarantees?',venue:'Financial Cryptography 2022',date:'2022',place:'St. George’s, Grenada',city:'St. George’s',country:'Grenada',coords:[12.0561,-61.7488]},
+  {title:'ShareLock: Financial Privacy-enhancing NOW!',venue:'San Francisco Blockchain Week',date:'October 29, 2019',place:'San Francisco, California, USA',city:'San Francisco',country:'USA',coords:[37.777,-122.4194],video:'https://www.youtube.com/watch?v=rUybszluzg0'},
+  {title:'MixEth: Efficient, Trustless Coin Mixing Service for Ethereum',venue:'EthCC 2019',date:'March 7, 2019',place:'Paris, France',city:'Paris',country:'France',coords:[48.8566,2.3522],video:'https://www.youtube.com/watch?v=NZMy2ATY-5o'},
+  {title:'The Shape of Lightning',venue:'Talk in Amsterdam',date:'May 1, 2019',place:'Amsterdam, Netherlands',city:'Amsterdam',country:'Netherlands',coords:[52.3700,4.9041]},
+  {title:'Topological Analysis of the Lightning Network',venue:'Breaking Bitcoin 2019',date:'June 8, 2019',place:'Amsterdam, Netherlands',city:'Amsterdam',country:'Netherlands',coords:[52.3676,4.9041],video:'https://www.youtube.com/watch?v=1iAfJnlGJ6c'},
+  {title:'Speeding SNARK Verifiers',venue:'Young Cryptographers Forum 2025 · VIASM',date:'August 24–25, 2025',place:'Hanoi, Vietnam',city:'Hanoi',country:'Vietnam',coords:[21.0285,105.8542],url:'https://viasm.edu.vn/hdkh/YCF2025',slides:'https://docs.google.com/presentation/d/1UHj0IkpJmYisvTyZROm0xbMaxY1n13zEwexUID2hZWk/edit?usp=sharing'},
+  {title:'Private Delegation of (Non-)Membership Proof Updates in Cryptographic Accumulators: Applications to Revocable Anonymous Credentials',venue:'NIST Workshop on Privacy-Enhancing Cryptography 2026 · Online',date:'October 28, 2026',place:'Princeton, New Jersey, USA',city:'Princeton',country:'USA',coords:[40.3573,-74.6672],url:'https://csrc.nist.gov/presentations/2026/wpec2026-3b2',slides:'https://csrc.nist.gov/csrc/media/presentations/2026/wpec2026-3b2/images-media/wpec2026-3b2-slides-accum-proof-delegation--i-seres.pdf'}
+];
+const talkSlug = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const detail=document.getElementById('talk-detail');
+const index=document.getElementById('talk-index');
+const talkStats=document.getElementById('talk-stats');
+const talkSearch=document.getElementById('talk-search');
+const talkSearchResults=document.getElementById('talk-search-results');
+const moreTalks=document.getElementById('more-talks-list');
+const uniqueCities=new Set(talks.map(talk=>talk.city));
+const uniqueCountries=new Set(talks.map(talk=>talk.country));
+talkStats.innerHTML=`<div class="talk-stat"><strong>${talks.length}</strong><span>talks</span></div><div class="talk-stat"><strong>${uniqueCities.size}</strong><span>cities</span></div><div class="talk-stat"><strong>${uniqueCountries.size}</strong><span>countries</span></div>`;
+function buildAggregate(targetId,key,secondaryKey){
+  const groups=new Map();talks.forEach(talk=>{
+    const label=talk[key];if(!groups.has(label))groups.set(label,[]);groups.get(label).push(talk);
+  });
+  const target=document.getElementById(targetId);
+  [...groups.entries()].sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0])).forEach(([label,items])=>{
+    const button=document.createElement('button');button.type='button';button.className='aggregate-item';
+    button.innerHTML=`<span>${label}${secondaryKey?` <small>${items[0][secondaryKey]}</small>`:''}</span><b>${items.length}</b>`;
+    button.addEventListener('click',()=>{talkSearch.value=label;renderTalkSearch(label);});target.append(button);
+  });
+}
+function renderTalkSearch(query){
+  const normalized=query.trim().toLocaleLowerCase();talkSearchResults.replaceChildren();
+  if(!normalized){talkSearchResults.hidden=true;return;}
+  const matches=talks.filter(talk=>[talk.title,talk.venue,talk.city,talk.country,talk.date].join(' ').toLocaleLowerCase().includes(normalized));
+  talkSearchResults.hidden=false;
+  const heading=document.createElement('p');heading.className='search-result-count';heading.textContent=`${matches.length} ${matches.length===1?'talk':'talks'} found`;talkSearchResults.append(heading);
+  matches.forEach(talk=>{
+    const button=document.createElement('button');button.type='button';button.className='talk-search-result';
+    const title=document.createElement('span');title.textContent=talk.title;
+    const meta=document.createElement('small');meta.textContent=`${talk.city}, ${talk.country} · ${talk.date}`;
+    button.append(title,meta);button.addEventListener('click',()=>showTalk(talk));talkSearchResults.append(button);
+  });
+  if(matches.length===0){const empty=document.createElement('p');empty.className='search-empty';empty.textContent='Try another city or country name.';talkSearchResults.append(empty);}
+}
+buildAggregate('country-aggregate','country');
+buildAggregate('city-aggregate','city','country');
+talkSearch.addEventListener('input',()=>renderTalkSearch(talkSearch.value));
+function showTalk(talk) {
+  const videoId=talk.video?.match(/[?&]v=([^&]+)/)?.[1];
+  const talkHash=`#talk-${talkSlug(talk.title)}`;
+  detail.innerHTML=`<button class="detail-close" type="button" aria-label="Close talk details">×</button><div class="venue">${talk.venue}</div><h3 id="talk-detail-title">${talk.title}</h3><p class="talk-meta">${talk.date} · ${talk.place}</p>${videoId?`<div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${talk.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`:''}${talk.url?`<p><a href="${talk.url}" target="_blank" rel="noopener">Event information ↗</a></p>`:''}${talk.slides?`<p><a href="${talk.slides}" target="_blank" rel="noopener">Slides ↗</a></p>`:''}${talk.video?`<p><a href="${talk.video}" target="_blank" rel="noopener">Watch on YouTube ↗</a></p>`:''}<p><a class="talk-permalink" href="${talkHash}">Link to this talk ↗</a></p>`;
+  if(location.hash!==talkHash)history.replaceState(null,'',talkHash);
+  if(!detail.open)detail.showModal();
+  detail.querySelector('.detail-close').addEventListener('click',()=>detail.close());
+}
+detail.addEventListener('close',()=>{if(location.hash.startsWith('#talk-'))history.replaceState(null,'',`${location.pathname}${location.search}`);});
+function openTalkFromHash(){const id=decodeURIComponent(location.hash.slice(1));if(!id.startsWith('talk-'))return;const talk=talks.find(item=>`talk-${talkSlug(item.title)}`===id);if(talk)showTalk(talk);}
+window.addEventListener('hashchange',openTalkFromHash);
+ [...talks].sort((a,b)=>{
+  const stamp=value=>{const normalized=value.replace(/([–-])\d{1,2}(?=,)/,'');const parsed=Date.parse(normalized);const year=Number(value.match(/\d{4}/)?.[0]||0);return Number.isNaN(parsed)?Date.UTC(year,0,1):parsed;};
+  return stamp(b.date)-stamp(a.date);
+ }).forEach(talk=>{
+  const entry=document.createElement('article');entry.className='entry';
+  const venue=document.createElement('div');venue.className='venue';venue.textContent=`${talk.venue} · ${talk.place} · ${talk.date}`;
+  const title=document.createElement('div');title.className='title';
+  const open=document.createElement('button');open.type='button';open.className='paper-open';open.textContent=talk.title;open.addEventListener('click',()=>showTalk(talk));title.append(open);
+  const links=document.createElement('div');links.className='links';
+  [[talk.video,'Video'],[talk.url,'Event'],[talk.slides,'Slides']].filter(item=>item[0]).forEach(([href,label])=>{const link=document.createElement('a');link.href=href;link.textContent=label;if(/^https?:/.test(href)){link.target='_blank';link.rel='noopener';}links.append(link);});
+  entry.append(venue,title);if(links.childElementCount)entry.append(links);moreTalks.append(entry);
+});
+talks.forEach(talk=>{
+  const button=document.createElement('button');
+  button.className='talk-index-item'; button.type='button';
+  button.innerHTML=`<span>${talk.title}</span><small>${talk.place} · ${talk.date}</small>`;
+  button.addEventListener('click',()=>showTalk(talk)); index.append(button);
+});
+const markerLayer=document.getElementById('map-markers');
+const locations=new Map();
+talks.forEach(talk=>{const key=talk.place; if(!locations.has(key))locations.set(key,[]);locations.get(key).push(talk);});
+const locationGroups=[...locations.entries()].map(([place,items])=>({place,items,coords:items[0].coords}));
+const mapViewport=document.getElementById('map-viewport');
+const mapCanvas=document.getElementById('map-canvas');
+let mapScale=1,mapX=0,mapY=0,dragState=null;
+function clampMap(){
+  const bounds=mapViewport.getBoundingClientRect();
+  const maxX=(mapScale-1)*bounds.width/2,maxY=(mapScale-1)*bounds.height/2;
+  mapX=Math.max(-maxX,Math.min(maxX,mapX));mapY=Math.max(-maxY,Math.min(maxY,mapY));
+}
+function renderMap(){
+  clampMap();mapCanvas.style.transform=`translate(${mapX}px,${mapY}px) scale(${mapScale})`;
+  renderMarkers();
+  const haloScale=Math.max(.58,1/mapScale);
+  markerLayer.querySelectorAll('.map-marker').forEach(marker=>{
+    marker.style.setProperty('--marker-scale',1/mapScale);
+    marker.style.setProperty('--halo-scale',haloScale);
+    marker.style.setProperty('--core-scale',1/haloScale);
+  });
+}
+function renderMarkers(){
+  markerLayer.replaceChildren();
+  const bounds=mapViewport.getBoundingClientRect(),parents=locationGroups.map((_,i)=>i);
+  const root=i=>parents[i]===i?i:(parents[i]=root(parents[i]));
+  for(let i=0;i<locationGroups.length;i++)for(let j=i+1;j<locationGroups.length;j++){
+    const [latA,lonA]=locationGroups[i].coords,[latB,lonB]=locationGroups[j].coords;
+    const dx=(lonA-lonB)*bounds.width/360*mapScale,dy=(latA-latB)*bounds.height/180*mapScale;
+    if(Math.hypot(dx,dy)<18){const a=root(i),b=root(j);parents[b]=a;}
+  }
+  const clusters=new Map();locationGroups.forEach((location,i)=>{
+    const key=root(i);if(!clusters.has(key))clusters.set(key,[]);clusters.get(key).push(location);
+  });
+  for(const cluster of clusters.values()){
+    const items=cluster.flatMap(location=>location.items);
+    const lat=cluster.reduce((sum,location)=>sum+location.coords[0],0)/cluster.length;
+    const lon=cluster.reduce((sum,location)=>sum+location.coords[1],0)/cluster.length;
+    const label=cluster.map(location=>location.place).join(' · ');
+    const marker=document.createElement('button');marker.className='map-marker';marker.type='button';
+    marker.setAttribute('aria-label',`${label}: ${items.length} ${items.length===1?'talk':'talks'}`);
+    marker.style.left=`${(lon+170)/360*100}%`;marker.style.top=`${(90-lat)/180*100}%`;
+    marker.innerHTML=`<span class="marker-halo"><span class="marker-core">${items.length>1?items.length:''}</span></span>`;
+    marker.addEventListener('click',()=>items.length===1?showTalk(items[0]):showTalkChoices(label,items));markerLayer.append(marker);
+  }
+}
+function zoomMap(nextScale,anchorX,anchorY){
+  const bounds=mapViewport.getBoundingClientRect(),oldScale=mapScale;
+  nextScale=Math.max(1,Math.min(6,nextScale));
+  if(nextScale===1){mapX=0;mapY=0;}else{
+    const cx=anchorX??bounds.width/2,cy=anchorY??bounds.height/2;
+    mapX=cx-(cx-mapX)*nextScale/oldScale;mapY=cy-(cy-mapY)*nextScale/oldScale;
+  }
+  mapScale=nextScale;renderMap();
+}
+document.getElementById('map-zoom-in').addEventListener('click',()=>zoomMap(mapScale*1.5));
+document.getElementById('map-zoom-out').addEventListener('click',()=>zoomMap(mapScale/1.5));
+document.getElementById('map-reset').addEventListener('click',()=>{mapScale=1;mapX=0;mapY=0;renderMap();});
+mapViewport.addEventListener('wheel',event=>{
+  event.preventDefault();const bounds=mapViewport.getBoundingClientRect();
+  zoomMap(mapScale*(event.deltaY<0?1.18:1/1.18),event.clientX-bounds.left,event.clientY-bounds.top);
+},{passive:false});
+mapViewport.addEventListener('pointerdown',event=>{
+  if(event.target.closest('button'))return;
+  dragState={x:event.clientX,y:event.clientY,startX:mapX,startY:mapY};
+  mapViewport.classList.add('is-dragging');mapViewport.setPointerCapture(event.pointerId);
+});
+mapViewport.addEventListener('pointermove',event=>{
+  if(!dragState)return;mapX=dragState.startX+event.clientX-dragState.x;mapY=dragState.startY+event.clientY-dragState.y;renderMap();
+});
+function endMapDrag(){dragState=null;mapViewport.classList.remove('is-dragging');}
+mapViewport.addEventListener('pointerup',endMapDrag);mapViewport.addEventListener('pointercancel',endMapDrag);
+renderMap();
+function showTalkChoices(place,items) {
+  detail.innerHTML=`<button class="detail-close" type="button" aria-label="Close talk details">×</button><div class="venue">Talk location</div><h3 id="talk-detail-title">${place}</h3><p class="talk-meta">Choose a talk to see its details.</p><div class="choice-list">${items.map((talk,i)=>`<button class="talk-choice" type="button" data-talk-index="${i}"><span>${talk.title}</span><small>${talk.venue} · ${talk.date}</small></button>`).join('')}</div>`;
+  if(!detail.open)detail.showModal();
+  detail.querySelector('.detail-close').addEventListener('click',()=>detail.close());
+  detail.querySelectorAll('.talk-choice').forEach(button=>button.addEventListener('click',()=>showTalk(items[Number(button.dataset.talkIndex)])));
+}
+openTalkFromHash();
+</script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31ae7902332245d4b2b64dac29ed133d"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>
